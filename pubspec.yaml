@@ -63,11 +63,11 @@ flutter:
   fonts:
     - family: Graphik
       fonts:
-        - asset: fonts/GraphikRegular.otf
-        - asset: fonts/GraphikMedium.otf
-        - asset: fonts/GraphikSemiBold.otf
-        - asset: fonts/GraphikBold.otf
-        - asset: fonts/GraphikRegularItalic.otf
+        - asset: assets/fonts/GraphikRegular.otf
+        - asset: assets/fonts/GraphikMedium.otf
+        - asset: assets/fonts/GraphikSemibold.otf
+        - asset: assets/fonts/GraphikBold.otf
+        - asset: assets/fonts/GraphikRegularItalic.otf
           style: italic
   #   - family: Trajan Pro
   #     fonts:

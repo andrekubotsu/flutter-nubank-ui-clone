@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_ui_clone/modules/splash/splash_page.dart';
 
 import 'modules/home/home_page.dart';
 
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.purple,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: HomePage(),
     );
   }
 }
