@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.purple,
       ),
       home: HomePage(),
+      locale: Locale('pt_BR'),
     );
   }
 }

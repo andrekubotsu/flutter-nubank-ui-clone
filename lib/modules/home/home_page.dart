@@ -18,7 +18,63 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       top: false,
       bottom: true,
-      child: Scaffold(appBar: CustomAppBar(mediaSize: mediaSize)),
+      child: Scaffold(
+        appBar: CustomAppBar(mediaSize: mediaSize),
+        body: Column(
+          children: [
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 24.0, vertical: 16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Conta',
+                    style: AppTextStyles.graphik17black600,
+                  ),
+                  Icon(
+                    Icons.chevron_right,
+                    color: AppColors.black,
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24.0),
+              child: Row(
+                children: [
+                  Text(
+                    'R\$ 999,99',
+                    style: AppTextStyles.graphik24black600,
+                  ),
+                ],
+              ),
+            ),
+            Row(
+              children: [
+                CircleAvatar(
+                  backgroundColor: AppColors.lightGrey,
+                  child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.piano,
+                        color: AppColors.black,
+                      )),
+                ),
+                CircleAvatar(
+                  backgroundColor: AppColors.lightGrey,
+                  child: IconButton(
+                      onPressed: () {},
+                      icon: Icon(
+                        Icons.favorite_border_outlined,
+                        color: AppColors.black,
+                      )),
+                )
+              ],
+            )
+          ],
+        ),
+      ),
     );
   }
 }
