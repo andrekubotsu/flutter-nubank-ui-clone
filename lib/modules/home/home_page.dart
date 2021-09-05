@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nubank_ui_clone/shared/constants/app_colors.dart';
+import 'package:nubank_ui_clone/shared/constants/app_fonts.dart';
+import 'package:nubank_ui_clone/shared/widgets/custom_appbar_widget.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -16,78 +18,7 @@ class _HomePageState extends State<HomePage> {
     return SafeArea(
       top: false,
       bottom: true,
-      child: Scaffold(
-        appBar: PreferredSize(
-          child: Container(
-            color: AppColors.purple,
-            child: Padding(
-              padding: const EdgeInsets.fromLTRB(15, 40, 15, 10),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          CircleAvatar(),
-                          Icon(
-                            Icons.person_outline_sharp,
-                            color: AppColors.white,
-                          )
-                        ],
-                      ),
-                      Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.visibility_outlined,
-                              color: AppColors.white,
-                            ),
-                          ),
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.help_outline,
-                              color: AppColors.white,
-                            ),
-                          ),
-                          IconButton(
-                            onPressed: () {},
-                            icon: Icon(
-                              Icons.forward_to_inbox,
-                              color: AppColors.white,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      children: [
-                        Text(
-                          'Olá, Andre',
-                          style: TextStyle(
-                              color: AppColors.white,
-                              fontSize: 16,
-                              fontFamily: 'Graphik',
-                              fontWeight: FontWeight.w500),
-                        )
-                      ],
-                    ),
-                  )
-                ],
-              ),
-            ),
-          ),
-          preferredSize: Size(mediaSize.width, 120),
-        ),
-      ),
+      child: Scaffold(appBar: CustomAppBar(mediaSize: mediaSize)),
     );
   }
 }
