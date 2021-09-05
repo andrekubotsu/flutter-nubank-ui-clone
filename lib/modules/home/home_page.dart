@@ -109,7 +109,7 @@ class _HomePageState extends State<HomePage> {
                 width: mediaSize.width,
                 decoration: BoxDecoration(
                   color: AppColors.lightGrey,
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(15),
                 ),
                 child: Row(
                   children: [
@@ -121,6 +121,61 @@ class _HomePageState extends State<HomePage> {
                       'Meus cartões',
                       style: AppTextStyles.graphik14black500,
                     )
+                  ],
+                ),
+              ),
+            ),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+                child: Row(
+                  children: [
+                    Container(
+                      padding: const EdgeInsets.all(20),
+                      width: 300,
+                      decoration: BoxDecoration(
+                        color: AppColors.lightGrey,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: RichText(
+                        text: TextSpan(
+                            text: 'Você tem ',
+                            style: AppTextStyles.graphik14black400,
+                            children: [
+                              TextSpan(
+                                text: 'R\$ 100.000,00',
+                                style: AppTextStyles.graphik14purple400,
+                              ),
+                              TextSpan(
+                                  text: ' disponíveis para empréstimo',
+                                  style: AppTextStyles.graphik14black400)
+                            ]),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 20,
+                    ),
+                    Container(
+                      padding: const EdgeInsets.all(20),
+                      width: 300,
+                      decoration: BoxDecoration(
+                        color: AppColors.lightGrey,
+                        borderRadius: BorderRadius.circular(15),
+                      ),
+                      child: RichText(
+                        text: TextSpan(
+                            text: 'Salve seus amigos da burocracia.    ',
+                            style: AppTextStyles.graphik14black400,
+                            children: [
+                              TextSpan(
+                                text: 'Faça um convite para o Nubank',
+                                style: AppTextStyles.graphik14purple400,
+                              ),
+                            ]),
+                      ),
+                    ),
                   ],
                 ),
               ),
