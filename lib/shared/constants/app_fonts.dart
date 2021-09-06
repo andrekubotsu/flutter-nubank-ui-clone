@@ -10,6 +10,13 @@ class AppTextStyles {
     fontWeight: FontWeight.w500,
   );
 
+  static const graphik12white500 = TextStyle(
+    color: AppColors.white,
+    fontFamily: 'Graphik',
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+  );
+
   static const graphik14black400 = TextStyle(
     color: AppColors.black,
     fontFamily: 'Graphik',

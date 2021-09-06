@@ -3,6 +3,7 @@ import 'package:nubank_ui_clone/shared/constants/app_colors.dart';
 import 'package:nubank_ui_clone/shared/constants/app_fonts.dart';
 import 'package:nubank_ui_clone/shared/widgets/custom_appbar_widget.dart';
 import 'package:nubank_ui_clone/shared/widgets/custom_icon_text_button_widget.dart';
+import 'package:nubank_ui_clone/shared/widgets/custom_purple_button_widget.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -326,21 +327,7 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(
                       height: 15,
                     ),
-                    InkWell(
-                      onTap: () {},
-                      borderRadius: BorderRadius.circular(30),
-                      child: Ink(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 13, vertical: 10),
-                        decoration: BoxDecoration(
-                            color: AppColors.purple,
-                            borderRadius: BorderRadius.circular(30)),
-                        child: Text(
-                          'Conhecer',
-                          style: AppTextStyles.graphik16white500,
-                        ),
-                      ),
-                    )
+                    CustomPurpleButton(text: 'Conhecer'),
                   ],
                 ),
               ),
@@ -387,6 +374,137 @@ class _HomePageState extends State<HomePage> {
                   ],
                 ),
               ),
+              Container(
+                padding: const EdgeInsets.all(20),
+                width: mediaSize.width,
+                decoration: BoxDecoration(
+                  border: Border(
+                    top: BorderSide(color: AppColors.grey),
+                  ),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Descubra mais',
+                      style: AppTextStyles.graphik17black600,
+                    ),
+                  ],
+                ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Row(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(25),
+                        width: 290,
+                        decoration: BoxDecoration(
+                            color: AppColors.lightGrey,
+                            borderRadius: BorderRadius.circular(15)),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Parcele com a gente',
+                              style: AppTextStyles.graphik17black600,
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              'A loja não parcela? Faça a compra e parcele depois, direto aqui no app.',
+                              style: AppTextStyles.graphik14grey400,
+                            ),
+                            SizedBox(
+                              height: 30,
+                            ),
+                            CustomPurpleButton(text: 'Parcelar compra')
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(25),
+                        width: 290,
+                        decoration: BoxDecoration(
+                            color: AppColors.lightGrey,
+                            borderRadius: BorderRadius.circular(15)),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Indique seus amigos',
+                              style: AppTextStyles.graphik17black600,
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              'Mostre aos seus amigos como é fácil ter uma vida sem burocracia.',
+                              style: AppTextStyles.graphik14grey400,
+                            ),
+                            SizedBox(
+                              height: 30,
+                            ),
+                            CustomPurpleButton(text: 'Indicar amigos')
+                          ],
+                        ),
+                      ),
+                      SizedBox(
+                        width: 15,
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(25),
+                        width: 290,
+                        decoration: BoxDecoration(
+                            color: AppColors.lightGrey,
+                            borderRadius: BorderRadius.circular(15)),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Row(
+                              children: [
+                                Text(
+                                  'WhatsApp ',
+                                  style: AppTextStyles.graphik17black600,
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.all(4),
+                                  decoration: BoxDecoration(
+                                      color: AppColors.purple,
+                                      borderRadius: BorderRadius.circular(5)),
+                                  child: Text(
+                                    'Novo',
+                                    style: AppTextStyles.graphik12white500,
+                                  ),
+                                )
+                              ],
+                            ),
+                            SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              'Pagamentos seguros, rápidos e sem tarifa. A experiência Nubank sem nem sair da conversa.',
+                              style: AppTextStyles.graphik14grey400,
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            CustomPurpleButton(text: 'Quero conhecer')
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 20)
             ],
           ),
         ),
