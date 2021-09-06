@@ -1,16 +1,20 @@
 # nubank_ui_clone
 
-A new Flutter project.
+This is a "classic" challenge in Brazil. This fintech is famous by using Flutter.
 
-## Getting Started
+**IMPORTANT OBSERVATIONS**
+- this a clone, but not exact - I don't have access to the design system etc;
+- I used what was possible: Material Icons and stuff;
+- I am using Graphik font (non-commercial purpose);
+- All icons could be different, mock purposes only;
+- It does have a lots of code lines, I were not thinking the best solution, just to clone the UI;
 
-This project is a starting point for a Flutter application.
+**Features**
+- A simple Splash Page;
+- Values toggle visibility button (little eye icon button on top);
+- Some componentization: only what I considered 100% necessary;
 
-A few resources to get you started if this is your first Flutter project:
+**Screenshots**
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<p><img src="https://github.com/andrekubotsu/flutter-nubank-ui-clone/blob/main/screen1.png" width="300"><img src="https://github.com/andrekubotsu/flutter-nubank-ui-clone/blob/main/screen2.png" width="300"></p>
+<p><img src="https://github.com/andrekubotsu/flutter-nubank-ui-clone/blob/main/screen3.png" width="300"><img src="https://github.com/andrekubotsu/flutter-nubank-ui-clone/blob/main/screen4.png" width="300"></p>
