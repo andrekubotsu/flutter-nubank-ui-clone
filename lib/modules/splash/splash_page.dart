@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nubank_ui_clone/modules/home/home_page.dart';
 import 'package:nubank_ui_clone/shared/constants/app_colors.dart';
 
 class SplashPage extends StatefulWidget {
@@ -9,6 +10,20 @@ class SplashPage extends StatefulWidget {
 }
 
 class _SplashPageState extends State<SplashPage> {
+  @override
+  void initState() {
+    WidgetsFlutterBinding.ensureInitialized().addPostFrameCallback((timeStamp) {
+      Future.delayed(Duration(seconds: 2)).then(
+        (value) => Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (BuildContext context) => HomePage(),
+          ),
+        ),
+      );
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     final mediaSize = MediaQuery.of(context).size;
