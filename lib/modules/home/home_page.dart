@@ -21,10 +21,10 @@ class _HomePageState extends State<HomePage> {
       top: false,
       bottom: true,
       child: Scaffold(
-        appBar: CustomAppBar(mediaSize: mediaSize),
         body: SingleChildScrollView(
           child: Column(
             children: [
+              CustomAppBar(mediaSize: mediaSize),
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20.0, vertical: 16),
