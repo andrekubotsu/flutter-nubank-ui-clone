@@ -13,6 +13,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool isVisible = true;
+
+  toggleVisibility() {
+    isVisible = !isVisible;
+  }
+
   @override
   Widget build(BuildContext context) {
     final mediaSize = MediaQuery.of(context).size;
@@ -24,7 +30,15 @@ class _HomePageState extends State<HomePage> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              CustomAppBar(mediaSize: mediaSize),
+              CustomAppBar(
+                isVisible: isVisible,
+                mediaSize: mediaSize,
+                toggleVisibility: () {
+                  setState(() {
+                    toggleVisibility();
+                  });
+                },
+              ),
               Padding(
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20.0, vertical: 16),
@@ -46,10 +60,16 @@ class _HomePageState extends State<HomePage> {
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Row(
                   children: [
-                    Text(
-                      'R\$ 999,99',
-                      style: AppTextStyles.graphik24black600,
-                    ),
+                    isVisible
+                        ? Text(
+                            'R\$ 999,99',
+                            style: AppTextStyles.graphik24black600,
+                          )
+                        : Container(
+                            width: 250,
+                            height: 30,
+                            color: AppColors.lightGrey,
+                          )
                   ],
                 ),
               ),
@@ -224,10 +244,16 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(
                       height: 10,
                     ),
-                    Text(
-                      'R\$ 2000,00',
-                      style: AppTextStyles.graphik24black600,
-                    ),
+                    isVisible
+                        ? Text(
+                            'R\$ 2000,00',
+                            style: AppTextStyles.graphik24black600,
+                          )
+                        : Container(
+                            width: 250,
+                            height: 30,
+                            color: AppColors.lightGrey,
+                          ),
                     SizedBox(
                       height: 10,
                     ),
@@ -277,10 +303,16 @@ class _HomePageState extends State<HomePage> {
                     SizedBox(
                       height: 7,
                     ),
-                    Text(
-                      'R\$ 15000,00',
-                      style: AppTextStyles.graphik14grey400,
-                    )
+                    isVisible
+                        ? Text(
+                            'R\$ 15000,00',
+                            style: AppTextStyles.graphik14grey400,
+                          )
+                        : Container(
+                            width: 250,
+                            height: 30,
+                            color: AppColors.lightGrey,
+                          )
                   ],
                 ),
               ),

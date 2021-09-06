@@ -5,16 +5,18 @@ import 'package:nubank_ui_clone/shared/constants/app_fonts.dart';
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
     Key? key,
-    this.isVisible,
+    this.toggleVisibility,
     this.goHelp,
     this.goInvite,
     required this.mediaSize,
+    required this.isVisible,
   }) : super(key: key);
 
-  final void Function()? isVisible;
+  final void Function()? toggleVisibility;
   final void Function()? goHelp;
   final void Function()? goInvite;
   final mediaSize;
+  final bool isVisible;
 
   @override
   Widget build(BuildContext context) {
@@ -42,21 +44,26 @@ class CustomAppBar extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     IconButton(
-                      onPressed: () {},
-                      icon: Icon(
-                        Icons.visibility_outlined,
-                        color: AppColors.white,
-                      ),
+                      onPressed: toggleVisibility,
+                      icon: isVisible
+                          ? Icon(
+                              Icons.visibility_outlined,
+                              color: AppColors.white,
+                            )
+                          : Icon(
+                              Icons.visibility_off_outlined,
+                              color: AppColors.white,
+                            ),
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: goHelp,
                       icon: Icon(
                         Icons.help_outline,
                         color: AppColors.white,
                       ),
                     ),
                     IconButton(
-                      onPressed: () {},
+                      onPressed: goInvite,
                       icon: Icon(
                         Icons.forward_to_inbox,
                         color: AppColors.white,
