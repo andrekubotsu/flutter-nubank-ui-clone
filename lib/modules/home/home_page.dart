@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                           )
                         : Container(
                             width: 250,
-                            height: 30,
+                            height: 26,
                             color: AppColors.lightGrey,
                           )
                   ],
@@ -251,7 +251,7 @@ class _HomePageState extends State<HomePage> {
                           )
                         : Container(
                             width: 250,
-                            height: 30,
+                            height: 26,
                             color: AppColors.lightGrey,
                           ),
                     SizedBox(
@@ -310,7 +310,7 @@ class _HomePageState extends State<HomePage> {
                           )
                         : Container(
                             width: 250,
-                            height: 30,
+                            height: 20,
                             color: AppColors.lightGrey,
                           )
                   ],
